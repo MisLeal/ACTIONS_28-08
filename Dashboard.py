@@ -30,11 +30,14 @@ coluna1, coluna2 = st.columns(2)
 with coluna1:
     st.header("ACTIONS :pushpin:")
     st.dataframe(
-    dados.style.applymap(color_total, subset=['Total'])
+    dados.style.applymap(color_total, subset=['Total']),
+    use_container_width=True
 )
     
 with coluna2:
     st.header('CRM :briefcase:')
     st.dataframe(
-    dados_crm.style.applymap(color_total, subset=['Qtd_Historicos'])
+    dados_crm.style.applymap(color_total, subset=['Qtd_Historicos']),
+    use_container_width=True
+
 )
